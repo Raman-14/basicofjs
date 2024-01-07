@@ -16,3 +16,5 @@ for(let j = 1; j<=10; j++){
     }
     console.log(j);
 }
+// continue keyword agar true hoga toh wo firse loop mein chl jaayega 
+//isse iss loop mein 4 number print nai hoga    
