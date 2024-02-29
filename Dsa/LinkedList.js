@@ -84,7 +84,25 @@ function deleteLinkedList(startingPoint, deleteLocation){
     }
 }
 
-deleteLinkedList(startingPoint, deleteLocation);
+// deleteLinkedList(startingPoint, deleteLocation);
+printLinkedList(startingPoint);
+
+function reverse(startingPoint){
+    let prev = null;
+    let current = startingPoint;
+    let next = null;
+    while(current != null){
+        next = current.next;
+        current.next = prev;
+        prev = current;
+        // console.log(prev)
+        current = next;
+    }
+    return prev;
+}
+startingPoint = reverse(startingPoint);
+// reverse(startingPoint);
+console.log(98);
 printLinkedList(startingPoint);
 
 
