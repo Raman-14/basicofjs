@@ -67,7 +67,7 @@ function findLengthLinkedList(startingPoint){
     return length;
 }
 
-// console.log(findLengthLinkedList(startingPoint));
+console.log(findLengthLinkedList(startingPoint));
 
 let deleteLocation = 'Golmuri';
 
@@ -84,7 +84,7 @@ function deleteLinkedList(startingPoint, deleteLocation){
     }
 }
 
-// deleteLinkedList(startingPoint, deleteLocation);
+deleteLinkedList(startingPoint, deleteLocation);
 printLinkedList(startingPoint);
 
 function reverse(startingPoint){
