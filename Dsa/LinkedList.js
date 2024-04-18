@@ -13,6 +13,17 @@ class Node{
     }
 }
 
+class Node{
+    constructor(value, next){
+        this.value = value;
+        this.next = next;
+    }
+}
+
+let head = new Node('gvdp',null);
+head.next = new Node('telco', null);
+head.next.next = new Node('golmuri', null);
+
 let startingPoint = new Node('gvdp',null );
 startingPoint.next = new Node('telco', null);
 startingPoint.next.next = new Node('nildih', null);
@@ -24,6 +35,14 @@ function printLinkedList(startingPoint){
     while(startingPoint != null){
         console.log(startingPoint.value, '->');
         startingPoint = startingPoint.next;
+    }
+}
+
+function printLInked(head){
+    let current = head;
+    while(current != null){
+        console.log(current.value, '->');
+        current = current.next;
     }
 }
 
@@ -39,6 +58,14 @@ function insertNewLinkedList(startingPoint){
         currentLocation.next = new Node('sakchi', null);
 }
 
+function insertLInked(head){
+    let current  = head;
+    while(current.next != null){
+        current = current.next;
+    }
+    current.next = new Node('sakchi',null);
+}
+
 insertNewLinkedList(startingPoint);
 // printLinkedList(startingPoint);
 
@@ -50,6 +77,18 @@ function search(startingPoint, target){
             return currentLocation.value
         }
         currentLocation = currentLocation.next; // telco // nildih // golmuri
+    }
+    return -1;
+}
+
+let targetLinked = 'telco';
+function seArch(head, targetLinked){
+    let current = head;
+    while(current !== null){
+        if(current.value === target){
+            return current.value
+        }
+        current = current.next;
     }
     return -1;
 }

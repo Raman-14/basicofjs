@@ -17,13 +17,13 @@ function delNode(del_node){
     let temp = del_node.next;    //  temp = del_node.next,  temp = 3;
 		
     //copying the data of pointer in the given current node.
-    del_node.value = temp.value;   // del_node.
+    del_node.value = temp.value;   // del_node.value = temp.value,   del_node.value = 3
     
     //storing the next node to pointer in link part of current node.
-    del_node.next = temp.next;
+    del_node.next = temp.next;   //  del_node.next = 4;
     
     // freeing memory.
-    temp = null;
+    temp = null;   // temp = null;
 }
 
 function printNode(head){
