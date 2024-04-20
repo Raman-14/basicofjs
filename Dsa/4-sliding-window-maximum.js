@@ -28,16 +28,21 @@ const maxSlidingWindowNaive = function (nums, k) {
 const maxSlidingWindowQueue = function(nums, k){
     const result = [];
     const deque = [];
+    // step - 1 make space for new element in dequeue
 for(let i = 0; i < nums.length; i++){
     while(deque.length > 0 && deque[0] <= i-k){
         deque.shift();
     }
-
+    
+    // step 2 pop the element of dequeue if it is less than new element
     while(deque.length > 0 && nums[deque[deque.length-1]]< nums[i]){
         deque.pop();
     }
+    
+    // step 3 push the new element in depue
     deque.push(i);
- 
+
+    //step 4 if(i>=k-1), then deq.front() is our answer for that window
     if(i >= k-1){
         result.push(nums[deque[0]]);
     }
