@@ -12,37 +12,9 @@
 // // console.log(map1.has(3));
 
 
-function insertElement(arr, pos, K, N) {
-    const len = arr.length;
 
-    // Check if there is space left in the array for the new element
-    if (len < N) {
-        // Space left
+// map object ek collection hai key-value pair ka
+// jisme key aur value dono ka koi v data-type ho skta hai
+// aur ye bht saara method v deta hai easy manipulation aur retrieval of data ka
 
-        // Calculate the index where the element will be inserted
-        const idx = pos - 1;
-
-        // Shift elements to the right starting from idx to make space for the new element
-        for (let i = len - 1; i >= idx; i--) {
-            arr[i + 1] = arr[i];
-        }
-
-        // Insert the element K at index idx
-        arr[idx] = K;
-
-        console.log("Element inserted successfully.");
-    } else {
-        // Array is full
-        console.log("Cannot insert element. Array is full.");
-    }
-}
-
-// Example usage
-let arr = [1, 2, 3, 4, 5];
-let pos = 3; // Position to insert
-let K = 10; // Element to insert
-let N = 10; // Maximum size of the array
-
-insertElement(arr, pos, K, N);
-
-console.log("Updated array:", arr);
+let myMap = new Map();
