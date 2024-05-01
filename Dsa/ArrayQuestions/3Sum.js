@@ -2,12 +2,10 @@
 
 function threeSum(nums) {
     let n = nums.length;
-
     // sbse pehle dekh lenge array ka size three hai v ya nai
     if (n < 3) {
         return [];
-    }
-    
+    }  
     let result = [];
 
     // fir sort kr lenge
@@ -39,10 +37,8 @@ function threeSum(nums) {
             }
         }
     }
-
     return result;
 }
-
 // Example usage:
 let nums = [-1, 0, 1, 2, -1, -4];
 console.log(threeSum(nums)); // Output: [[-1, -1, 2], [-1, 0, 1]]

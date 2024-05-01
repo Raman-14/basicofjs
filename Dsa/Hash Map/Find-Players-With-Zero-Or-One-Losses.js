@@ -18,7 +18,7 @@ function findWinners(matches){
             notLost.push(winner);
             lostMap.set(winner,2);
         }
-        console.log(lostMap.get(loser));
+        // console.log(lostMap.get(loser));
         if(lostMap.get(loser) === 1){
             lostOnce.push(loser);
         }
