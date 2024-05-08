@@ -8,13 +8,13 @@ let array1 = ["item1", "item2"];
 
 // iska teen way hai
 // 1. slice method
-// let array2 = array1.slice(0);
+let array2 = array1.slice(0);
 
 // 2. concat method
-// let array2 = [].concat(array1);
+let array3 = [].concat(array1);
 
 // 3. spread operator
-// let array2 = [...array1];
+let array4 = [...array1];
 
 // ab hum chahte hai ki array1 ka element ke sath kch extra element bhi add krna toh iske liye
 // let array2 = array1.slice().concat(["item3", "item4"]);
@@ -25,10 +25,13 @@ let array1 = ["item1", "item2"];
 
 //ab agar ek sath do array ek h array mein add krna hai toh
 let oneMoreArray = ["item3", "item4"];
-let array2 = [...array1, ...oneMoreArray];
+let array5 = [...array1, ...oneMoreArray];
 
 
-array1.push("item3");
-console.log(array1===array2);
+// array1.push("item3");
+// console.log(array1===array2);
 console.log(array1);
 console.log(array2);
+console.log(array3);
+console.log(array4);
+console.log(array5);
